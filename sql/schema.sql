@@ -1,0 +1,5 @@
+CREATE TABLE trips (
+  id INTEGER PRIMARY KEY,
+  city VARCHAR(120) NOT NULL,
+  days INTEGER NOT NULL CHECK (days > 0)
+);

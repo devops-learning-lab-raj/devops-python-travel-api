@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: travel-api
+  template:
+    metadata:
+      labels:
+        app: travel-api
+    spec:
+      containers:
+        - name: travel-api
+          image: YOUR_REGISTRY/travel-api:REPLACE_ME
+          ports:
+            - containerPort: 8000
